@@ -1,0 +1,25 @@
+sudo apt update
+sudo apt upgrade
+sudo apt install -y curl
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+node -v
+npm -v
+sudo npm install -g npm@latest
+
+===============================================================================
+
+####CREATE REACT APP 
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+npm run build 
+
+sudo cp -rf build/* /var/www/html/react-project/
+ sudo curl http://192.168.29.135/react-project/
+ 
+============================================================================
+
+

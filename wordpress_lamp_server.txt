@@ -1,0 +1,52 @@
+##### MYSQl setup server 
+
+sudo apt-get install mysql-server 
+sudo mysql_secure_installation 
+sudo mysql 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+exit
+
+sudo mysql -u root -p
+CREATE DATABASE demo_db;
+
+To access the new database, we will create a MySQL user account. Enter a strong password
+
+CREATE USER demo_user@localhost IDENTIFIED BY 'demo-password';
+
+You have just created a new user.
+
+GRANT ALL PRIVILEGES ON demo_db. * TO demo_user@localhost;
+
+After completing the above, flush your privileges to allow MySQL to implement the changes.
+
+FLUSH PRIVILEGES;
+
+exit;
+
+============================================================================================
+
+ubuntu@ubunu2004:~$ cd /var/www/html
+
+Now download the latest WordPress install with the following command.
+
+ubuntu@ubunu2004:/var/www/html$ sudo wget -c http://wordpress.org/latest.tar.gz
+
+ubuntu@ubunu2004:/var/www/html$ sudo tar -xzvf latest.tar.gz
+
+ubuntu@ubunu2004:/var/www/html$ ls -l
+
+ubuntu@ubunu2004: sudo chown -R www-data:www-data /var/www/html/wordpress
+
+ubuntu@ubunu2004:/var/www/html/wordpress$ mv wp-config-sample.php wp-config.php
+
+Edit the wpconfig. As shown below, edit the php file.
+
+ubuntu@ubunu2004:/var/www/html/wordpress$ gedit wp-config.php
+
+
+https://localhost/wordpress/
+
+=======================================================================================
+https://vexxhost.com/resources/tutorials/how-to-install-wordpress-with-ubuntu-20-04-and-a-lamp-stack/
+
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-20-04-with-a-lamp-stack

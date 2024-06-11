@@ -1,0 +1,15 @@
+
+
+sudo apt install ./package_name.deb
+
+=======================================
+
+sudo apt update
+sudo apt install gdebi
+sudo gdebi package_name.deb
+
+======================================
+
+double clik on package_name.deb
+
+
